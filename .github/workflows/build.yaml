@@ -4,7 +4,7 @@ on:
   push:
     tag:
       - 'v*'
-    branch: [main, release-*, master]
+    branch: [main, release-*, master, action]
   workflow_dispatch:
 env:
   IMAGE_REGISTRY: "ghcr.io"
