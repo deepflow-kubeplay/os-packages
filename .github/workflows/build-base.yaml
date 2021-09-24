@@ -5,6 +5,7 @@ on:
     paths:
       - 'build/base/**'
       - .github/workflows/build-base.yaml
+    branch: [main, release-*, master, action]
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch:
