@@ -78,6 +78,7 @@ debian10:
 fedora:
   - python3
   - libselinux-python3
+  - cronie
 
 fedora33:
   - containerd.io-1.4.9-3.1.fc33
