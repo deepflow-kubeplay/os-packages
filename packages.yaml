@@ -12,6 +12,8 @@ kubespray:
     - ipvsadm
     - ipset
     - conntrack
+    - tcpdump
+    - iotop
 
   yum:
     - nss
