@@ -2,9 +2,17 @@
 name: Build os-packages image
 on:
   push:
-    tag:
+    tags:
       - 'v*'
-    branch: [main, release-*, master, action]
+      - 'rc-*'
+      - 'beta-*'
+      - 'release-*'
+    branches: 
+      - 'main' 
+      - 'beta-*'
+      - 'release-*'
+      - 'master' 
+      - 'action'
   workflow_dispatch:
 env:
   IMAGE_REGISTRY: "ghcr.io"
