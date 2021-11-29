@@ -1,6 +1,7 @@
 ---
 name: Build os-packages image
 on:
+  pull_request:
   push:
     tags:
       - 'v*'
