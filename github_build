@@ -1,3 +1,4 @@
 ###build方法 提代码/build  然后打tag ,保证镜像tag为新tag
 build 2021-10-29-16-40 beta-07-kubernetes-1.21.5
 build 2021-11-17-12-30 release-kubernetes-1.21.5-01
+build 2021-12-17-17-10 release-kubernetes-1.21.5-02.1
