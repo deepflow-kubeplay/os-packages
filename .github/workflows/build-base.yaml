@@ -30,12 +30,12 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: fedora33
-            image_name: fedora-base:33
-            dockerfile: build/base/Dockerfile.fedora33
-          - name: fedora34
-            image_name: fedora-base:34
-            dockerfile: build/base/Dockerfile.fedora34
+          - name: fedora35
+            image_name: fedora-base:35
+            dockerfile: build/base/Dockerfile.fedora35
+          - name: fedora36
+            image_name: fedora-base:36
+            dockerfile: build/base/Dockerfile.fedora36
     steps:
       - name: Checkout
         uses: actions/checkout@v2
