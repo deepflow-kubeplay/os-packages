@@ -1,5 +1,5 @@
-FROM fedora:34 as os-fedora34
-ARG OS_VERSION=34
+FROM fedora:36 as os-fedora36
+ARG OS_VERSION=36
 ARG BUILD_TOOLS="yum-utils createrepo findutils"
 
 RUN dnf install -q -y ${BUILD_TOOLS} \

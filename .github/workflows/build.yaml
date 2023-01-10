@@ -34,12 +34,12 @@ jobs:
           - name: centos-8
             image_name: os-packages-centos8
             dockerfile: build/Dockerfile.os.centos8
-          - name: fedora-33
-            image_name: os-packages-fedora33
-            dockerfile: build/Dockerfile.os.fedora33
-          - name: fedora-34
-            image_name: os-packages-fedora34
-            dockerfile: build/Dockerfile.os.fedora34
+          - name: fedora-35
+            image_name: os-packages-fedora35
+            dockerfile: build/Dockerfile.os.fedora35
+          - name: fedora-36
+            image_name: os-packages-fedora36
+            dockerfile: build/Dockerfile.os.fedora36
           - name: debian-9
             image_name: os-packages-debian9
             dockerfile: build/Dockerfile.os.debian9
@@ -52,6 +52,9 @@ jobs:
           - name: ubuntu-2004
             image_name: os-packages-ubuntu2004
             dockerfile: build/Dockerfile.os.ubuntu2004
+          - name: ubuntu-2204
+            image_name: os-packages-ubuntu2204
+            dockerfile: build/Dockerfile.os.ubuntu2204
     steps:
       - name: Checkout
         uses: actions/checkout@v2

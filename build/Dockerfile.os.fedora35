@@ -1,0 +1,12 @@
+FROM ghcr.io/deepflow-kubeplay/fedora-base:35 as os-fedora35
+
+COPY packages.yaml .
+RUN yq eval '.common[],.yum[],.fedora[],.fedora35[],.kubespray.common[],.kubespray.yum[]' packages.yaml > packages.list
+
+RUN ARCH=$(uname -m) \
+    && sort -u packages.list | xargs repotrack --destdir ${ARCH} \
+    && createrepo -d ${ARCH}
+
+FROM scratch
+COPY --from=os-fedora35 /fedora /resources/nginx/fedora
+COPY repos/Fedora-All-in-One.repo /resources/nginx/repos/Fedora-35-All-in-One.repo

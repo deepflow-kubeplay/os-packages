@@ -2,6 +2,9 @@ FROM centos:8 as os-centos8
 ARG OS_VERSION=8
 ARG BUILD_TOOLS="yum-utils createrepo epel-release wget"
 
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
 RUN ARCH=$(uname -m) \
     && dnf install -q -y ${BUILD_TOOLS} \
     && dnf install -q -y http://mirror.centos.org/centos/8-stream/AppStream/${ARCH}/os/Packages/modulemd-tools-0.7-4.el8.noarch.rpm \
